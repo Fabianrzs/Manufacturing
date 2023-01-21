@@ -57,12 +57,14 @@ namespace Aplication.Product
 
                 if (find == null)
                 {
-                    return new Response<Domain.Entities.Entity.Product>("Error, Valide la informacion suministrada");
+                    return new Response<Domain.Entities.Entity.Product>
+                        ("Error, Valide la informacion suministrada");
                 }
 
                 await _repository.UpdateAsync(find);
 
-                return new Response<Domain.Entities.Entity.Product>("Producto actualizado con exito", false);
+                return new Response<Domain.Entities.Entity.Product>
+                    ("Producto actualizado con exito", false);
             }
             catch (AppException e)
             {
@@ -80,12 +82,14 @@ namespace Aplication.Product
 
                 if (find == null)
                 {
-                    return new Response<Domain.Entities.Entity.Product>("Error, Valide la informacion suministrada");
+                    return new Response<Domain.Entities.Entity.Product>
+                        ("Error, Valide la informacion suministrada");
                 }
 
                 await _repository.UpdateAsync(find);
 
-                return new Response<Domain.Entities.Entity.Product>("Producto actualizado con exito", false);
+                return new Response<Domain.Entities.Entity.Product>
+                    ("Producto actualizado con exito", false);
             }
             catch (AppException e)
             {
